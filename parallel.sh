@@ -3,7 +3,7 @@
 fileName=$1
 line=$2
 
-split -d -l $line $fileName $fileName
+split -d -l $line $fileName $fileName.part
 
 for fl in $fileName.part*
 do
