@@ -4,6 +4,7 @@ echo $argv[1]. "\n";
 $output = 'output'. $argv[1];
 // The new person to add to the file
 sleep(5);
+echo "done sleep \n";
 $person = "John Smith\n";
 // Write the contents to the file,
 // using the FILE_APPEND flag to append the content to the end of the file
