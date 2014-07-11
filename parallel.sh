@@ -3,12 +3,12 @@
 $fileName=$1
 $line=$2
 
-
 split -d l $line $fileName $fileName
 
 for fl in $fileName.part*
 do
-echo $fl
+php test.php $fl
 done
+cat output* > $fileName.output.csv
 
  
