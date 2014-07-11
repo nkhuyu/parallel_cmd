@@ -1,5 +1,5 @@
 <?php
-echo $argv[1]. '\n';
+echo $argv[1]. "\n";
 
 $output = 'output'. $argv[1];
 // The new person to add to the file

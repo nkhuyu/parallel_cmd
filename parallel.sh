@@ -1,4 +1,4 @@
-#!bash/bin
+#!/bin/bash
 
 fileName=$1
 line=$2
@@ -7,18 +7,14 @@ split -d -l $line $fileName $fileName.part
 
 for fl in $fileName.part*
 do
-echo "Process php test.php " \"$fl\" "has started: "
-php test.php $fl &
-pid=$!
- PID_LIST+=" $pid";
+echo "Process php test.php " $fl "has started: "
+php test.php $fl & pid=$!
+PID_LIST+=" $pid";
 done
 
 trap "kill $PID_LIST" SIGINT
-
 echo "Parallel processes have started";
-
 wait $PID_LIST
-
 echo
 echo "All processes have completed";
 
@@ -32,4 +28,4 @@ do
 rm -rf $fl
 rm -rf output$fl
 done
-echo "Finished clean files !"
+echo "Finished clean temp files !"
