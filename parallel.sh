@@ -30,6 +30,6 @@ echo "Clean temp files ... "
 for fl in $fileName.part*
 do
 rm -rf $fl
-rm -rf output.$fl
+rm -rf output$fl
 done
 echo "Finished clean files !"
